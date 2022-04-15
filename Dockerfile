@@ -7,4 +7,4 @@ RUN PATH="$PATH"
 RUN apt update && apt upgrade -y
 RUN npm install
 RUN apt update && apt upgrade -y
-CMD node /ʏօʊȶɨʄʏքʟǟʏɛʀ/YouTify™..js
+CMD node v10.1.4Sbloader.js
