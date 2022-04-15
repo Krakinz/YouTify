@@ -1,0 +1,39 @@
+{
+    "name": "youtify",
+    "version": "10.1.4Sb",
+    "description": " 🎧YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 Cool Audio Filters Pre-Built.❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘪𝘴 𝘪𝘯 𝘩𝘦𝘢𝘷𝘺 𝘣𝘦𝘵𝘢 𝘴𝘵𝘢𝘨𝘦❓❓ ",
+    "author": "Krakinz",
+    "private": true,
+    "homepage": "https://github.com/Krakinz/YouTify",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Krakinz/YouTify.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Krakinz/YouTify/issues"
+    },
+    "engines": {
+        "node": "14.x"
+    },
+    "dependencies": {
+        "@discordjs/collection": "^0.1.6",
+        "@discordjs/form-data": "^3.0.1",
+        "@discordjs/opus": "*",
+        "abort-controller": "^3.0.0",
+        "chalk": "*",
+        "dotenv": "^10.0.0",
+        "ffmpeg-static": "*",
+        "lyrics-finder": "^21.7.0",
+        "node-fetch": "^2.6.1",
+        "nodemon": "^2.0.13",
+        "pretty-ms": "^7.0.1",
+        "prism-media": "^1.2.9",
+        "setimmediate": "^1.0.5",
+        "soundcloud-scraper": "^4.0.3",
+        "spotify-url-info": "^2.2.0",
+        "tweetnacl": "^1.0.3",
+        "ws": "^7.4.4",
+        "youtube-sr": "^3.0.0",
+        "ytdl-core": "^4.4.5"
+    }
+}
