@@ -8,7 +8,8 @@
       "KRAKINZKEY": 
             { "description": "Discord api token",
       "required": true },
-            "YOUTIX": 
+            "YouTix": 
             { "description": "Prefix or commands handler",
       "required": true }
+}
 }
