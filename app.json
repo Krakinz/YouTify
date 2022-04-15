@@ -4,11 +4,11 @@
   "logo": "https://i.postimg.cc/9f0mS5NY/YouTify.png",
   "repository": "https://github.com/Krakinz/YouTify.git",
   "website": "https://github.com/Krakinz/YouTify.git",
-  "env": { "KRAKINZKEY": 
+  "env": {
+      "KRAKINZKEY": 
             { "description": "Discord api token",
       "required": true },
-         { "YouTix" : 
+            "YouTix" : 
             { "description": "Prefix or commands handler"
       "required": true }
-    }
 }
