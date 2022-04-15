@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          .setTitle(`\`💬8D\``)
+          .setTitle(`\`💬Surround\``)
           .setAuthor(
             `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          .setTitle(`\`💬8D\``)
+          .setTitle(`\`💬Surround\``)
           .setAuthor(
             `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -62,7 +62,7 @@ module.exports.run = async (client, message, args, Discord) => {
   // ===========================================================================================================================
   // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
-  Queue.Filters["8D"] = !Queue.Filters["8D"];
+  Queue.Filters["surround"] = !Queue.Filters["surround"];
   await YouTify_Singer(client, message, {
     Filter: true,
     Song: Queue.Songs[0],
@@ -72,7 +72,7 @@ module.exports.run = async (client, message, args, Discord) => {
       new MessageEmbed()
         .setTimestamp()
         .setColor("#43745a")
-        .setTitle(`\`💬8D\``)
+        .setTitle(`\`💬Surround\``)
         .setAuthor(
           `🎧YouTify™`,
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -82,8 +82,8 @@ module.exports.run = async (client, message, args, Discord) => {
         .setFooter(`👈🏽‍Reqstd by`, message.author.avatarURL({ dynamic: true }))
         .addField(
           `\`👄Filter Applied\``,
-          `8D Filter Has Been ${
-            Queue.Filters["8D"]
+          `Surround Filter Has Been ${
+            Queue.Filters["surround"]
               ? "✅Enabled (Song Maybe Ahead)"
               : "❌Disabled (Song Maybe Backward)"
           }!`,
@@ -102,12 +102,12 @@ module.exports.run = async (client, message, args, Discord) => {
 // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 module.exports.help = {
-  name: "8D",
+  name: "surround",
   yougen: "Sebeta-v9.6.79ie0",
-  aliases: ["8d"],
+  aliases: ["sur"],
   cooldown: 10000,
   category: "Filters",
-  description: "Add/Remove 8D Filter To/From Currently Playing Song!",
-  usage: "8D",
-  examples: ["8D"],
+  description: "Add/Remove surround Filter To/From Currently Playing Song!",
+  usage: "surround",
+  examples: ["surround"],
 };
