@@ -5,5 +5,8 @@
   "repository": "https://github.com/Krakinz/YouTify.git",
   "website": "https://github.com/Krakinz/YouTify.git",
   "env": { "KRAKINZKEY": { "description": "Discord api token",
-      "required": true } }
+      "required": true } 
+         { "YouTix" : { "description": "Prefix or commands handler"
+      "required": true }
+    }
 }
