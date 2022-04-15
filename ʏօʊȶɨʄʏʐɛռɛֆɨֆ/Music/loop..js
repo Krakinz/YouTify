@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          .setTitle(`\`💬Skip\``)
+          .setTitle(`\`💬Loop\``)
           .setAuthor(
             `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -22,7 +22,11 @@ module.exports.run = async (client, message, args, Discord) => {
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addField(`\`☣️Error\``, `You Are Not Connected To Any VoiceChannel !`, true)
+          .addField(
+            `\`☣️Error\``,
+            `You are You Are Not Connected To Any VoiceChannel !`,
+            true
+          )
       );
       return;
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
@@ -76,7 +80,7 @@ Try use ?clean and play again!`)
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          .setTitle(`\`💬Skip\``)
+          .setTitle(`\`💬Loop\``)
           .setAuthor(
             `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -137,17 +141,14 @@ Try use ?clean and play again!`)
   // ===========================================================================================================================
   // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
-  if (!Queue.Playing) {
-    Queue.Playing = true;
-  }
   try {
-    await Queue.Connection.dispatcher.end();
+    Queue.Loop = Queue.Loop ? false : true;
     await message.react("🟢");
     await message.channel.send(
       new MessageEmbed()
         .setTimestamp()
         .setColor("#43745a")
-        .setTitle(`\`💬Skip\``)
+        .setTitle(`\`💬Loop\``)
         .setAuthor(
           `🎧YouTify™`,
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -159,12 +160,11 @@ Try use ?clean and play again!`)
           message.author.avatarURL({ dynamic: true })
         )
         .addField(
-          `\`⏭️Skipped\``,
-          `YouTify™ last Music has been Skipped!`,
+          `\`🔁Loop\``,
+          `Loop Has Been ${Queue.Loop ? "Enabled" : "Disabled"}!`,
           true
         )
     );
-    return;
   } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     message.client.channels.cache.get(`896660877091164180`).send(
       new MessageEmbed()
@@ -209,12 +209,12 @@ Try use ?clean and play again!`)
 // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 module.exports.help = {
-  name: "skip",
+  name: "loop",
   yougen: "Sebeta-v9.6.79ie0",
-  aliases: ["sk", "s"],
+  aliases: ["lp", "l"],
   cooldown: 10000,
   category: "Music",
-  description: "Skip A Song!",
-  usage: "Skip",
-  examples: ["skip"],
+  description: "On Loop Or Off Loop!",
+  usage: "Loop",
+  examples: ["loop"],
 };

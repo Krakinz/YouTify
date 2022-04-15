@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          .setTitle(`\`💬Skip\``)
+          .setTitle(`\`💬Shuffle\``)
           .setAuthor(
             `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -76,7 +76,7 @@ Try use ?clean and play again!`)
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          .setTitle(`\`💬Skip\``)
+          .setTitle(`\`💬Shuffle\``)
           .setAuthor(
             `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -137,17 +137,17 @@ Try use ?clean and play again!`)
   // ===========================================================================================================================
   // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
-  if (!Queue.Playing) {
-    Queue.Playing = true;
-  }
+  const Current = await Queue.Songs.shift();
+  Queue.Songs = Queue.Songs.sort(() => Math.random() - 0.5);
+  await Queue.Songs.unshift(Current);
+
   try {
-    await Queue.Connection.dispatcher.end();
     await message.react("🟢");
     await message.channel.send(
       new MessageEmbed()
         .setTimestamp()
         .setColor("#43745a")
-        .setTitle(`\`💬Skip\``)
+        .setTitle(`\`💬Shuffle\``)
         .setAuthor(
           `🎧YouTify™`,
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -159,8 +159,8 @@ Try use ?clean and play again!`)
           message.author.avatarURL({ dynamic: true })
         )
         .addField(
-          `\`⏭️Skipped\``,
-          `YouTify™ last Music has been Skipped!`,
+          `\`🥳Shuffled\``,
+          `YouTify™ Music Queue has been shuffled!`,
           true
         )
     );
@@ -209,12 +209,12 @@ Try use ?clean and play again!`)
 // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 module.exports.help = {
-  name: "skip",
+  name: "shuffle",
   yougen: "Sebeta-v9.6.79ie0",
-  aliases: ["sk", "s"],
+  aliases: ["sfl"],
   cooldown: 10000,
   category: "Music",
-  description: "Skip A Song!",
-  usage: "Skip",
-  examples: ["skip"],
+  description: "Shuffle Music Queue!",
+  usage: "Shuffle",
+  examples: ["shuffle"],
 };
